@@ -14,9 +14,9 @@ print(exp_a)
 '''
 Now sum of answer should be equal to 1
 '''
-answer = exp_a / sum(exp_a)
+answer = exp_a / exp_a.sum()
 print(answer)
-print(sum(answer))
+print(answer.sum())
 
 '''
 Lately we're going to work with multiple samples at the same time.
@@ -26,6 +26,6 @@ A = np.random.rand(100, 5)
 print(A[:5])
 exp_A = np.exp(A)
 print(exp_A[:5])
-answer_A = exp_A / sum(exp_A)
+answer_A = exp_A / exp_A.sum()
 print(answer_A[:5])
-print(sum(answer_A))
+print(answer_A.sum())
