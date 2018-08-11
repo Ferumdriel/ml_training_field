@@ -7,7 +7,7 @@ We have 5 different numbers that represent 5 different nodes at the output layer
 a = np.random.rand(5)
 print(a)
 '''
-First step is to exponentiate them
+First step is to exponentiate them so they're all positive
 '''
 exp_a = np.exp(a)
 print(exp_a)
@@ -26,6 +26,6 @@ A = np.random.rand(100, 5)
 print(A[:5])
 exp_A = np.exp(A)
 print(exp_A[:5])
-answer_A = exp_A / exp_A.sum()
+answer_A = exp_A / exp_A.sum(axis=1, keepdims=True)
 print(answer_A[:5])
 print(answer_A.sum())
