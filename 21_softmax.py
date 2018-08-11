@@ -26,6 +26,13 @@ A = np.random.rand(100, 5)
 print(A[:5])
 exp_A = np.exp(A)
 print(exp_A[:5])
-answer_A = exp_A / exp_A.sum(axis=1, keepdims=True)
+answer_A = exp_A / exp_A.sum(axis=1, keepdims=True) #axis = 1 because we want to sum by rows
 print(answer_A[:5])
-print(answer_A.sum())
+print(answer_A.sum(axis=1))
+
+'''
+Check what denominator gives you
+'''
+denominator = answer_A.sum(axis=1, keepdims=True)
+print(denominator)
+print(denominator.shape)
