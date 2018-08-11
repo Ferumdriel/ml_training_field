@@ -12,8 +12,20 @@ First step is to exponentiate them
 exp_a = np.exp(a)
 print(exp_a)
 '''
-Now answer should be equal to 1
+Now sum of answer should be equal to 1
 '''
 answer = exp_a / sum(exp_a)
 print(answer)
+print(sum(answer))
 
+'''
+Lately we're going to work with multiple samples at the same time.
+This mean we won't have 1-D array of length 5 but 2-D array of size (N,5)
+'''
+A = np.random.rand(100, 5)
+print(A[:5])
+exp_A = np.exp(A)
+print(exp_A[:5])
+answer_A = exp_A / sum(exp_A)
+print(answer_A[:5])
+print(sum(answer_A))
